@@ -1,0 +1,15 @@
+version: "3"
+
+services:
+  jupyter:
+    build: 
+      context: ./
+    # image: jupyterlab:latest
+    environment:
+      JUPYTER_TOKEN: "docker"
+    ports:
+      - 8888:8888
+    volumes:
+      - ./data:/project/data
+      - ./notebooks:/project/notebooks
+      
